@@ -26,6 +26,8 @@ def add(message):
     if len(task) < 3:
         bot.send_message(message.chat.id, 'Задачи должны быть больше 3х символов')
     ad_todo(date, task)
+    elif 5 < len(task) < 7:
+        bot.send_message(message.chat.id, 'Задачи должны быть больше 7х символов')
     text = f"Задача {task} добавлена на дату {date}"
     bot.send_message(message.chat.id, text)
 
