@@ -4,7 +4,7 @@ HELP = """
 /add - добавить задачу в список (название задачи запрашиваем у пользователя).
 /show - напечатать все добавленные задачи.
 /random - добавить случайную задачу на Сегодня.
-/ - команда выхода."""
+/exit"""
 tasks = {}
 def ad_todo(date, task):
   if date in tasks:
@@ -13,7 +13,7 @@ def ad_todo(date, task):
     tasks[date] = []
     tasks[date].append(task)
 
-@bot.message_handler(commands = ["exit"])
+
 @bot.message_handler(commands = ["help"])
 def help(message):
   bot.send_message(message.chat.id, HELP)
