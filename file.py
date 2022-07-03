@@ -13,7 +13,7 @@ def ad_todo(date, task):
     tasks[date] = []
     tasks[date].append(task)
 
-
+@bot.message_handler(commands = ["exit"])
 @bot.message_handler(commands = ["help"])
 def help(message):
   bot.send_message(message.chat.id, HELP)
